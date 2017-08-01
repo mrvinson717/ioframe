@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6.5%"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/imageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="我的"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+            />
+
+
+
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_launcher_round"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/text_setting"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="设置"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            />
+
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="@color/black"
+
+        ></View>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="25%"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/line"
+        android:layout_alignParentStart="true">
+
+
+    <com.fjw.myapp.view.CircleImageView
+
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="20dp"/>
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="可爱的利达"
+         android:layout_marginLeft="20dp"
+         android:textColor="#000000"
+         android:textSize="20sp"
+         />
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_viewpager"
+        android:layout_below="@id/ll1"
+        app:tabIndicatorColor="#666666"
+        app:tabSelectedTextColor="#4D4D4D"
+        app:tabTextColor="#A7A7A7" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</android.support.percent.PercentRelativeLayout>
+

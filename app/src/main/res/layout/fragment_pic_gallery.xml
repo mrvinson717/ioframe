@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.percent.PercentRelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6.5%"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/imageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="艺术图库"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+            />
+
+
+
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_launcher_round"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_height="18dp"
+            android:layout_width="18dp"
+            android:src="@mipmap/search_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            />
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="@color/black"
+
+        >
+
+    </View>
+
+<ScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/line"
+    >
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="6.5%"
+
+        android:gravity="center_vertical"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:text="话题"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/more1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="更多" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.fjw.myapp.view.MyRecyclerView
+        android:id="@+id/id_recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:scrollbars="none"
+        android:layout_below="@+id/rl1"
+        />
+
+    <ImageView
+        android:id="@+id/iv_youlike"
+
+        android:layout_below="@+id/id_recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_heightPercent="35%"
+        android:src="@mipmap/demo_one"
+        >
+
+
+    </ImageView>
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6.5%"
+
+        android:gravity="center_vertical"
+        android:layout_below="@+id/iv_youlike"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:text="艺术家"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/more2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="更多" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.fjw.myapp.view.MyRecyclerView
+        android:id="@+id/id_recyclerview_horizontal2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/rl2"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6.5%"
+
+        android:gravity="center_vertical"
+        android:layout_below="@+id/id_recyclerview_horizontal2"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:text="艺术机构"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:layout_alignTop="@+id/linearLayout3"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:id="@+id/linearLayout3">
+
+            <TextView
+                android:id="@+id/more3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:text="更多" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+        <com.fjw.myapp.view.MyRecyclerView
+            android:id="@+id/id_recyclerview_horizontal3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scrollbars="none"
+            android:layout_below="@+id/rl3"
+            />
+
+
+    </android.support.percent.PercentRelativeLayout>
+</ScrollView>
+</android.support.percent.PercentRelativeLayout>
+

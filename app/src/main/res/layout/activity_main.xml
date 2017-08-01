@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context="com.fjw.myapp.activity.MainActivity">
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="90%"
+        app:layout_widthPercent="100%"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"></FrameLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+       android:orientation="horizontal"
+        android:layout_below="@id/fragment"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@mipmap/fragment1"/>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/fragment2"/>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@mipmap/fragment3"/>
+        <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+            android:layout_height="30dp"
+        android:layout_weight="1"
+        android:src="@mipmap/fragment4"/>
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:scaleType="center"
+            android:layout_weight="1"
+            android:src="@mipmap/fragment5"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.percent.PercentRelativeLayout>

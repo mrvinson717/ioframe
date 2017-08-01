@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context="com.fjw.myapp.activity.SearchPicActivity">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+
+
+        >
+       <!-- <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/search_icon"/>
+
+        <EditText
+
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="搜索艺术馆、艺术家"/>
+-->
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/sv_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:searchIcon="@mipmap/search_icon"
+            android:queryHint="搜索艺术馆、艺术家"
+            app:queryHint="搜索艺术馆、艺术家"
+            android:layout_margin="5dp"
+            android:layout_height="match_parent">
+
+
+
+        </android.support.v7.widget.SearchView>
+       <!-- <ImageView
+            android:id="@+id/go_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@mipmap/ic_launcher_round" />-->
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/txt_hot_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:text="热门搜索" />
+
+    <com.fjw.myapp.view.FlowLayout
+        app:width_space="10dp"
+        app:height_space="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_hot_search"
+        >
+
+
+    </com.fjw.myapp.view.FlowLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flowLayout"
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.percent.PercentRelativeLayout>
